@@ -1,3 +1,6 @@
+
+// Use 'npm test' in terminal to run this file...as we have updated package.json to run this file as the test (hence 'npm test')
+
 const assert = require('assert');
 const Taxi = require('../taxi.js'); // Don't need to use the .js in the file name?
 
@@ -6,6 +9,7 @@ describe('Taxi', function () {
 
     let taxi;
 
+    // This function will run before each 'it' function...
     beforeEach(function() {
         taxi = new Taxi("Toyota", "Prius")
     });
@@ -36,5 +40,16 @@ describe('Taxi', function () {
 
     });
 
+
+    it('should be able to add a passenger', function () {
+        // Arrange - partly done Taxi was added in beforeEach()
+        const kidda = "Kidda";
+
+        // Act
+        taxi.addPassenger(kidda);
+
+        // Assert
+        assert.deepStrictEqual(taxi.passengers, ["Kidda"]);     //(actual, expected)
+    });
 
 })

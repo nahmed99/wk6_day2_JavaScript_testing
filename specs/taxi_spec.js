@@ -11,7 +11,7 @@ describe('Taxi', function () {
 
     // This function will run before each 'it' function...
     beforeEach(function() {
-        taxi = new Taxi("Toyota", "Prius")
+        taxi = new Taxi("Toyota", "Prius");
     });
 
     // These are names for the tests:

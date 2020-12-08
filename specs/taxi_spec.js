@@ -52,4 +52,15 @@ describe('Taxi', function () {
         assert.deepStrictEqual(taxi.passengers, ["Kidda"]);     //(actual, expected)
     });
 
+
+    it("should start with no passengers", function() {
+        // Arrange
+
+        // Act
+
+        // Assert
+        assert.deepStrictEqual(taxi.passengers, []);
+
+    });
+
 })
